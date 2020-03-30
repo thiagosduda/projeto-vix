@@ -7,7 +7,7 @@ import Form from '../../components/Form';
 
 import { Container, SignLink, SignLinkText } from './styles';
 
-export default function Cadastrar({ navigation }) {
+export default function SignUp({ navigation }) {
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
@@ -44,7 +44,7 @@ export default function Cadastrar({ navigation }) {
   );
 }
 
-Cadastrar.navigationOptions = {
+SignUp.navigationOptions = {
   title: 'SignUp',
   headerStyle: {
     backgroundColor: '#3b9eff',

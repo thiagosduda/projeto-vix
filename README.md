@@ -2,53 +2,53 @@
   Projeto realizado para uma vaga de estágio na Vix Tecnologia
 </h3>
 
+## Funcionalidades
 
-<p align="center">
+- Autenticação
+- Visualização dos usuários cadastrados
+- Cadastrar novo usuário
+- Editar e deletar usuário cadastrado
 
-  <a href="https://www.linkedin.com/in/thiagoduda/">
-    <img alt="Feito por Thiago Duda">
-  </a>
+## Como usar
 
-</p>
+Requisitos:
 
-## :rocket: Sobre o projeto
-  Aplicação mobile que conta com uma API com sistema de autenticação e um dashboard onde é possivel cadastrar/editar e deletar usuários. <br>
-  Como usuário logado, você terá permissões de editar/deletar e cadastrar novos usuários na aplicação
-  </br>
-  Para essa aplicação foi utilizado Postgres em ambiente Docker e o ORM utilizado foi o Sequelize.
+- Yarn || Npm
+- [Back-end] da aplicação rodando
+  - Esse projeto usa PostgreSQL, recomendo que use Docker para instalar e rodar a base de dados
+  -  Copie o conteúdo de .env.example e defina as variaveis de ambiente
+  > cp .env.example .env
 
-## :runner: Instalação
-
-```
- // 1 - Git Clone
-
-  // 2 - Em backend: Copie o conteúdo de .env.example e defina as variaveis de ambiente
-  cp .env.example .env
-
-  // 2.1 - Inicie o BD (Você precisa ter o docker instalado)
-
-  // 2.2 - Instale as dependencias
-  yarn install
-
-  2.3 - Rode a aplicação
-  yarn dev
-
-  // 3 - Instalando o projeto mobile (Você precisa ter instalado o react-native-cli)
-
-   // Se você está emulando em um android - rode este comando
-   react-native run-android
-   // Se está emulando em um sistema iOS - rode este comando
-   react-native run-ios
-
-  // 3 - Inicie a aplicação (A API precisa estar rodando localmente)
-    yarn start
-
-  // Se possuir algum erro, use
-    yarn start --reset-cache
-
-```
+Após a instalação do banco de dados e inicialização do backend com o comando 
+- Yarn dev
 
 
----
+### Mobile
+
+Instale o react-native-cli
+Nesse projeto estou utilizando o emulador genymotion, caso queira usa-lo também, segue uma documentação com o passo a passo de instalação:
+
+https://docs.rocketseat.dev/ambiente-react-native/introducao
+
+##### Lembrando que caso não for utilizar genymotion, o ip de conexão com a API via axios deve ser alterado de acordo com o ambiente em que a aplicação será emulada.
+- Ex: No iphone a baseURL da api pode ser http://localhost:3333, o android não consegue utilizar diretamente localhost.
+Caso esteja em um ambiente do proprio android studio use: http://10.0.2.2:3333
+Caso esteja emulando o genymotion a baseURL que ja esta configurada ira se manter
+Se estiver emulando via usb a baseURL será o ip da sua rede Ex: http://192.168.X.X:3333
+
+Feito isso:
+
+Utilize: 
+> react-native run-android ou yarn android
+
+Caso esteja emulando em IOS
+
+> react-native run-ios ou yarn ios
+
+Após instalada a aplicação em seu emulador utilize um dos comandos para startar a aplicação 
+
+> react-native start || yarn start
+
+
 
 Feito por Thiago. [Veja meu linkedin!](https://www.linkedin.com/in/thiagoduda/)

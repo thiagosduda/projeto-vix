@@ -2,7 +2,7 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
 import SignIn from './pages/SignIn';
-import Cadastrar from './pages/Cadastrar';
+import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import Info from './pages/Info';
 import AddUser from './pages/AddUser';
@@ -14,7 +14,7 @@ export default (isSigned = false) =>
       {
         Sign: createStackNavigator({
           SignIn,
-          Cadastrar,
+          SignUp,
         }),
         App: createStackNavigator({
           Dashboard,

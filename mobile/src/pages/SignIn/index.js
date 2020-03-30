@@ -59,7 +59,7 @@ export default function SignIn({ navigation }) {
 
       <SignLink
         onPress={() => {
-          navigation.navigate('Cadastrar');
+          navigation.navigate('SignUp');
         }}
       >
         <SignLinkText>Cadastrar um usuário </SignLinkText>
